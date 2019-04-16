@@ -27,17 +27,20 @@ class MyForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label htmlFor="title">Titre</label>
-        <input
-          type="text"
-          id="title"
-          onChange={this.handleChange}
-          value={this.state.title}
-        />
-        <br />
-        <input type="submit" value="Submit" />
-      </form>
+      <div>
+        <h2>{this.state.globalTitle}</h2>
+        <form onSubmit={this.handleSubmit}>
+          <label htmlFor="title">Titre</label>
+          <input
+            type="text"
+            id="title"
+            onChange={this.handleChange}
+            value={this.state.title}
+          />
+          <br />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     );
   }
 }
